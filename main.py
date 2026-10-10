@@ -80,7 +80,7 @@ def join(ip):
 if __name__ == "__main__":
     a = sys.argv[1:]
     if a == ["solo"]: solo()
-    elif a[:1] == ["host"] and 2 <= len(a) <= 3 and a[1] in ("3", "4", "5", "6") and (len(a) == 2 or a[2].isdigit() and int(a[2]) > 0):
+    elif a[:1] == ["host"] and 2 <= len(a) <= 3 and a[1] in ("2", "3", "4", "5", "6") and (len(a) == 2 or a[2].isdigit() and int(a[2]) > 0):
         host(int(a[1]), int(a[2]) if len(a) == 3 else Tm)
     elif len(a) == 2 and a[0] == "join": join(a[1])
-    else: print("usage: atlas.py solo | host <3-6> [seconds] | join <ip>")
+    else: print("usage: atlas.py solo | host <2-6> [seconds] | join <ip>")
